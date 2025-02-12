@@ -1,15 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Container, Typography } from "@mui/material";
+import CompanyOverview from "../components/ContactPage";
+import PCBuild from "../components/build/PCBuild";
 
 const Contact = () => {
   return (
     <>
       <Header />
-      <Container>
-        <Typography variant="h4">Contact Us</Typography>
-        <Typography>Reach out to The Computer Community.</Typography>
-      </Container>
+      <CompanyOverview/>
+      <PCBuild/>
       <Footer />
     </>
   );

@@ -1,15 +1,18 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Container, Typography } from "@mui/material";
+import HeroSection from "../components/about/HeroSection";
+import CompanyIntroMission from "../components/about/CompanyIntroMission";
+import CompanyOverview from "../components/about/CompanyOverview";
 
 const About = () => {
   return (
     <>
       <Header />
-      <Container>
-        <Typography variant="h4">About Us</Typography>
-        <Typography>Learn more about The Computer Community.</Typography>
-      </Container>
+      
+        <HeroSection/>
+        <CompanyIntroMission/>
+        <CompanyOverview/>
       <Footer />
     </>
   );
