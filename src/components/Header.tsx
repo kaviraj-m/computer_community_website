@@ -61,7 +61,7 @@ const Header = () => {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
             {['Build PC', 'Components', 'About Us', 'Contact Us'].map((text) => (
               <Button key={text} sx={{ color: 'white', textTransform: 'none', fontSize: '16px', '&:hover': { color: 'gold' } }}>
-                <Link href={['Build PC', 'Components', 'Talk to Expert'].includes(text) ? "/under-construction" : `/${text.toLowerCase().replace(/\s/g, '-')}`} passHref legacyBehavior>
+                <Link href={['Components', 'Talk to Expert'].includes(text) ? "/under-construction" : `/${text.toLowerCase().replace(/\s/g, '-')}`} passHref legacyBehavior>
                   <a style={{ textDecoration: 'none', color: 'inherit' }}>{text}</a>
                 </Link>
               </Button>

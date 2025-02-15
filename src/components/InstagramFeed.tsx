@@ -20,6 +20,7 @@ const InstagramFeed = () => {
   return (
     <Box sx={{ position: "relative", backgroundColor: "#000", pb: 12 }}>
       <Container maxWidth="lg">
+        {/* Google Reviews Section */}
         <Typography
           variant="h4"
           sx={{
@@ -31,74 +32,66 @@ const InstagramFeed = () => {
             letterSpacing: "2px",
           }}
         >
-          Visit Our Studio
+          What Our Customers Say
         </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            textAlign: "center",
-            color: "#ddd",
-            mb: 4,
-            lineHeight: 1.7,
-            fontSize: "1.1rem",
-          }}
-        >
-          Find us at the heart of Kilpauk, Chennai. We’re always excited to
-          welcome you! Plan your visit and experience our creative space.
-        </Typography>
-
-        {/* Google Map */}
         <Box
           sx={{
-            position: "relative",
             width: "100%",
-            height: { xs: "300px", md: "400px" },
-            overflow: "hidden",
+            minHeight: "400px",
+            backgroundColor: "#101010",
+            color: "#fff",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             borderRadius: "12px",
-            boxShadow: "0 8px 20px rgba(0, 0, 0, 0.5)",
+            boxShadow: "0 6px 15px rgba(0, 0, 0, 0.5)",
+            overflow: "hidden",
+            position: "relative",
             mb: 4,
           }}
         >
-          <iframe
-            src="https://maps.google.com/maps?width=626&amp;height=558&amp;hl=en&amp;q=3, Lock St, Sanyasipuram, Kilpauk, Chennai, Tamil Nadu 600010&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen
-            aria-hidden="false"
-            tabIndex={0}
-          ></iframe>
+          {scriptLoaded ? (
+            <div
+              className="elfsight-app-54140cc8-4fac-4983-8c60-56a50f98b354"
+              data-elfsight-app-lazy
+              style={{ width: "100%", height: "100%" }}
+            ></div>
+          ) : (
+            <Box textAlign="center" p={4}>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#FFD700",
+                  mb: 2,
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                }}
+              >
+                Google Reviews Unavailable
+              </Typography>
+              <Typography variant="body2" sx={{ color: "#fff", opacity: 0.8 }}>
+                Please check your internet connection or try again later.
+              </Typography>
+            </Box>
+          )}
         </Box>
 
-        <Box textAlign="center" mb={4}>
-          <Button
-            variant="contained"
-            sx={{
-              textTransform: "none",
-              fontWeight: "bold",
-              padding: "12px 24px",
-              borderRadius: "8px",
-              backgroundColor: "#FFD700",
-              color: "#000",
-              fontSize: "1rem",
-              "&:hover": {
-                backgroundColor: "#e5c100",
-              },
-            }}
-            onClick={() =>
-              window.open(
-                "https://maps.google.com/maps?daddr=3, Lock St, Sanyasipuram, Kilpauk, Chennai, Tamil Nadu 600010",
-                "_blank"
-              )
-            }
-          >
-            Get Directions
-          </Button>
-        </Box>
+        {/* Instagram Feed Section */}
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#FFD700",
+            textTransform: "uppercase",
+            mb: 4,
+            letterSpacing: "2px",
+          }}
+        >
+          Follow Us on Instagram
+        </Typography>
 
-        {/* Instagram Feed */}
         <Box
           sx={{
             width: "100%",

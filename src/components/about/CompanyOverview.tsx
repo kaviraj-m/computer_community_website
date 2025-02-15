@@ -14,8 +14,8 @@ import { People, Build, ThumbUp, LocalShipping, Support } from '@mui/icons-mater
 
 const teamMembers = [
   { name: 'Rithish', role: 'Founder & CEO', icon: <People sx={{ fontSize: 50, color: '#FFD700' }} /> },
-  { name: 'Jane Smith', role: 'Lead Developer', icon: <Build sx={{ fontSize: 50, color: '#FFD700' }} /> },
-  { name: 'Mike Johnson', role: 'Marketing Head', icon: <ThumbUp sx={{ fontSize: 50, color: '#FFD700' }} /> },
+  { name: 'Ramesh', role: 'Lead Developer', icon: <Build sx={{ fontSize: 50, color: '#FFD700' }} /> },
+  { name: 'Kaviraj', role: 'Marketing Head', icon: <ThumbUp sx={{ fontSize: 50, color: '#FFD700' }} /> },
 ];
 
 const processSteps = [
